@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top {
+            font-weight: bold;
+            font-size: 50px;
+            color: red;
+
+        }
+
+        .textarea {
+            background-color: blue;
+            overflow: scroll;
+            border: 3px dotted;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .textarea:hover {
+            background-color: white;
+        }
+
+        .year:hover {
+            opacity: 0;
+        }
+
+        .name {
+            background-color: green;
+            border-radius: 20px;
+        }
+
+        .mail {
+            background-color: greenyellow;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form style="background-color: skyblue;">
+        <h4 class="top">설문조사</h4>
+        이름<br><input class="name" type="text"><br><br>
+        이메일<br><input class="mail" type="email" placeholder="love@example.com">
+        <h4>나이</h4>
+        <input class="year" type="radio" name="age" value="10대" checked>10대
+        <input class="year" type="radio" name="age" value="20대">20대
+        <input class="year" type="radio" name="age" value="30대">30대
+        <input class="year" type="radio" name="age" value="40대">40대
+        <h4>원하는 강의(복수 응답 가능)</h4>
+        <input type="checkbox" name="lecture" value="html" checked>html
+        <input type="checkbox" name="lecture" value="javascript">javascript
+        <input type="checkbox" name="lecture" value="css">css
+        <br><br>
+        <textarea class="textarea" cols="100" rows="10" placeholder="하고 싶은 말을 써주세요~"></textarea>
+        <br>
+        <input style="width: 760px; background-color: deeppink;" type="button" value="제출">
+    </form>
+</body>
+
+</html>
