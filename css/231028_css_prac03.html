@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .circle1 {
+            background-color: bisque;
+            left: 10px;
+            top: 10px;
+        }
+
+        .circle2 {
+            background-color: aqua;
+            left: 70px;
+            top: 50px;
+            z-index: 4;
+        }
+
+        .circle3 {
+            background-color: aquamarine;
+            left: 110px;
+            top: 90px;
+            z-index: 5;
+        }
+
+        .circle4 {
+            background-color: azure;
+            left: 170px;
+            top: 90px;
+            z-index: 6;
+        }
+
+        .circle5 {
+            background-color: bisque;
+            left: 230px;
+            top: 90px;
+            z-index: 9;
+        }
+
+        .eye1 {
+            background-color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            z-index: 2;
+        }
+
+        .eye2 {
+            background-color: black;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0px;
+            top: 6px;
+            z-index: 3;
+        }
+
+        .img {
+            position: absolute;
+            z-index: 8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <img class="img"
+            src="https://png.pngtree.com/png-clipart/20221115/original/pngtree-the-grass-is-green-and-dense-picture-image_6861008.png"
+            alt="green" width="330px" height="200px">
+        <div class="circle circle1">
+            <div class="eye1">
+                <div class="eye2"></div>
+            </div>
+        </div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+        <div class="circle circle5"></div>
+    </div>
+
+</body>
+
+</html>

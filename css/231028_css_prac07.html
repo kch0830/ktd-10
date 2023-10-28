@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prac07</title>
+    <style>
+        .back {
+            width: 500px;
+            height: 500px;
+            background-color: beige;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            flex-direction: row;
+            
+            /* justify-content: 주 축의 정렬 방법
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: center;
+            justify-content: space-between
+            justify-content: space-around */
+
+            /* align-items: 교차 축의 한 줄 정렬 방식
+            align-items: stretch;
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center; */
+
+            /* align-content: 교차 축의 여러 줄 정렬 방식
+            align-content: stretch;
+            align-content: flex-start; */
+        }
+
+        .back>div {
+            width: 100px;
+            height: 100px;
+        }
+
+        .item1 {
+            background-color: coral;
+        }
+
+        .item2 {
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+    </div>
+</body>
+
+</html>
