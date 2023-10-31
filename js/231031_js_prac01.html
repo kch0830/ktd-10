@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prac01</title>
+    <script>
+        let color = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'black'];
+        // 예제 1
+        console.log('index 2 :', color[2]);
+        // 예제 2
+        color.push('white');
+        console.log('push 후 : ', color);
+        // 예제 3 
+        console.log('black 추가 후 : ', color.indexOf('black'));
+        // 예제 4
+        let reverse = [...color].reverse();
+        console.log('반전 후 : ', reverse);
+
+        let chanhyuk = {
+            firstName: '찬혁',
+            lastName: '곽',
+            age: '33'
+        }
+        console.log(chanhyuk);
+        console.log(chanhyuk.firstName);
+        console.log(chanhyuk.lastName);
+        console.log(chanhyuk.age);
+
+        console.log(`${typeof 1} + isn't ${typeof '1'} + data type.`);
+        console.log('Typeof를 boolean이나 null에 사용하면,' + typeof true + '이나' + typeof null + '결과를 얻을 수 있습니다.');
+
+        let mathScore = 77;
+        let engScore = 88;
+        
+        let math = Number(mathScore);
+        let eng = Number(engScore);
+
+        let avgScore = (math + eng) / 2;
+
+        console.log(avgScore);
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
