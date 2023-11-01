@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funtion</title>
+    <script>
+        // 함수 호출
+        functionName();
+
+        function functionName(){
+            // 함수 선언문
+            console.log('안녕하새요');
+        }
+
+        let functionName2 = function(){
+            console.log('안녕하세요2');
+        }
+
+        // 함수 호출
+        functionName2();
+
+        let functionName3 = () => {
+            console.log('안녕하세요3');
+        }
+
+        // 함수 호출
+        functionName3();
+
+        // 매개변수가 있는 함수
+        // funtion 함수이름(매개변수1, 매개변수2, ...)
+        function hello(name, age = 15){
+            // hello라는 함수 범위 안에서만 쓸 수 있는 변수 : name, age
+            console.log(name + '님 안녕하세요!');
+            console.log(age + '세');
+
+            // 반환값이 있는 함수
+            return age + 10;
+        }
+        // 함수 호출
+        hello('홍길동', 10);
+
+        let result = hello('홍길동', 10);
+        console.log('result :', result);
+
+        hello(1);
+        console.log('name: ', name); // 출력되지 않음 why? name 이라는 변수는 위에 hello 함수 범위에서만 정의되
+
+        //onclick
+        function test(){
+            alert('TEST');
+        }
+
+        // 전역변수, 지역변수
+        // 전역변수 > 지역변수 범위가 더 큰 것
+        let num1 = prompt('첫번째 숫자');
+        num1 = Number(num1);
+        let num2 = prompt('두번째 숫자');
+        num2 = Number(num2);
+
+        function add(){
+            let result = num1 + num2;
+            alert(result);
+        }
+        function sub(){
+            let result = num1 - num2;
+            alert(result);
+        }
+        function mul(){
+            let result = num1 * num2;
+            alert(result);
+        }
+        function devide(){
+            let result = num1 / num2;
+            alert(result);
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <button onclick="add()">add</button>
+    <button onclick="sub()">sub</button>
+    <button onclick="mul()">mul</button>
+    <button onclick="devide()">devide</button>
+</body>
+</html>

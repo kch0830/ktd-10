@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prac04</title>
+    <script>
+        let now = new Date().getHours();
+        now = Number(now)
+        console.log(now);
+        // 3항 연산자
+        /* 조건식 ? 참일 때 실행할 코드 : 거짓일 때 실행할 코드
+        */
+        now < 12 ? console.log('오전') : console.log('오후')
+        switch (now) {
+            case 0:
+                console.log('자정');
+                break;
+            case 12:
+                console.log('정오');
+                break;
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

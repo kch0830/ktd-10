@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prac02</title>
+    <script>
+        let num1 = prompt('숫자를 입력하세요.');
+        let num2 = prompt('숫자를 입력하세요.');
+
+        function add(){
+            alert(Number(num1)+Number(num2));
+        }
+        function sub(){
+            alert(Number(num1)-Number(num2));
+        }
+        function divide(){
+            alert(Number(num1)/Number(num2));
+        }
+        function mul(){
+            alert(Number(num1)*Number(num2));
+        }
+
+    </script>
+</head>
+<body>
+    <button style="border: 3px solid black; width: 300px; height: 300px;" onclick="add()">add</button>
+    <button style="border: 3px solid black; width: 300px; height: 300px;" onclick="sub()">sub</button>
+    <button style="border: 3px solid black; width: 300px; height: 300px;" onclick="divide()">divide</button>
+    <button style="border: 3px solid black; width: 300px; height: 300px;" onclick="mul()">mul</button>
+</body>
+</html>

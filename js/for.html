@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+    <script>
+        // for(let i = 0; i < 10; i++){
+        //     //초기화 : i를 0으로 셋팅
+        //     //조건식 : i가 10보다 작을 때
+        //     //증감식 : i를 1씩 더한다
+        //     console.log('i : ', i)
+        // }
+        // for(let i = 1; i<10; i = i + 2){
+        //     console.log('i :', i)
+        // }
+        
+        let num = prompt('숫자를 입력하세요.')
+        num = Number(num)
+        for (let i = 1; i<=num; i++) {
+            if(i%13 ==0 && i%2 ==1)
+            console.log(i)
+        }
+
+        for (let i = 2; i < 10; i++) {
+            console.log('구구단' + i + '단');
+            for (let j = 1; j < 10; j++)
+                console.log(`${i}*${j} = ${i * j}`);
+        }
+
+        // while문
+        let i = 0;
+        while(i < 5) {
+            console.log('while i : ', i);
+            i++;
+        }
+        i = 0;
+        while(true){
+            console.log('while true i :', i)
+            i++
+            if(i < 10){
+                break;
+            }
+        }
+
+        // break문
+        for(let i= 0; i < 100; i ++){
+            if(i == 10){
+                console.log('뭠춰!');
+                break;
+            }
+            console.log(i);
+        }
+
+        // continue문
+        for(let i= 0; i < 100; i ++){
+            if(i == 10){
+                console.log('뭠춰!');
+                continue;
+            }
+            console.log(i);
+
+        // 정수 n이 있을 땨 2또는 3의 배수의 총합을 구하시오.(단 0<n<100)
+        
+    
+        num1 = Number(num1);
+        for(let i = 0; num1 < 100; ni++){
+            if(i%2 == 0 || i%3 == 0){
+                break;
+            }
+            num1 += i;
+        }
+
+        
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
