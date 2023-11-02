@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function solution(n) {
+            var answer = 0;
+            // n을 입력받고
+            // n%i == 0 이나오는 i값의 총 합
+
+            for (let i = 1; i < 3000; i++) {
+                if (n % i == 0) {
+                    answer = answer + i
+                } else {
+                    answer = answer
+                }
+            }
+
+            return answer;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
