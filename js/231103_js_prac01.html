@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+
+<body>
+    값1 : <input type="text" name="" id="input1" value="">
+    <br>
+    값2 : <input type="text" name="" id="input2" value="">
+    <br>
+    연산자 : <input type="text" name="" id="operation" value="">
+    <br>
+    결과 : <input type="text" name="" id="result" value="">
+    <br>
+    <button onclick="operation()">계산하기</button>
+    <button>초기화</button>
+
+    <script>
+
+        function operation() {
+            let input1 = document.querySelector('#input1');
+            let input2 = document.querySelector('#input2');
+            let operation = document.querySelector('#operation');
+
+            let a = Number(input1.value)
+            let b = Number(input2.value)
+            let c = operation.value 
+            if(c == '+'){
+                document.querySelector('result').innerHTML = 'a+b';
+                
+            } else if(c == '-'){
+                console.log(a-b);
+            } else if(c == '*'){
+                console.log(a*b)
+            } else if(c == '/'){
+                console.log(a/b);
+            } else{
+                console.log('잘못 입력');
+            }
+        }
+            
+
+    </script>
+   
+</body>
+
+</html>
