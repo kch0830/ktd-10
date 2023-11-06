@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prac01</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- <style>
+        .container{
+            width: 500px;
+            height: 500px;
+        }
+        #img{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+    <script> 
+        function apple(){
+            $('#img').attr('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM38DxD8Zrvql6Jsudi_Sot5Eu8ro4GMcvsw&usqp=CAU');
+        }
+        function banana(){
+            $('#img').attr('src', 'link');
+        }
+        function grape(){
+            $('#img').attr('src', 'link');
+        }
+        function peach(){
+            $('#img').attr('src', 'link');
+        }
+    </script> -->
+
+    <script>
+        function changeImg(name){
+            // img의 scr 속성을 변경해주는 함수
+            // name : apple,banana....
+            $('img').attr('src', './img/${name}.png') // name이라는 이미지 폴더 만들어서 사용 가능, 
+        }
+    </script>
+
+</head>
+<body>
+    <img src="" alt="과일">
+        <button onclick="changeImg('apple')">사과</button>
+        <button onclick="changeImg('banana')">바나나</button>
+        <button onclick="changeImg('grape')">포도</button>
+        <button onclick="changeImg('peach')">복숭아</button>
+
+    <!-- <div class="container">
+        <img id="img">
+        <button onclick="apple()">사과</button>
+        <button onclick="banana()">바나나</button>
+        <button onclick="grape()">포도</button>
+        <button onclick="peach()">복숭아</button>
+    </div> -->
+</body>
+</html>

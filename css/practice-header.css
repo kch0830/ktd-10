@@ -39,6 +39,7 @@ header {
 */
 /* header1 */
 .header1 {
+  display: none;
 }
 
 /* header2 */
