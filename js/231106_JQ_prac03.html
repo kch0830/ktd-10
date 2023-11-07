@@ -108,15 +108,30 @@
     </table>
 
     <script>
+      let target;
         $('td > p').on('click', function(){
-            var value = $('input:radio[name=]')
+            var value = $('this');
+            console.log(this);
+            console.log($(this).text());
+            $('#date').val($(this).text());
+            target = this;
         })
 
+        function writeSchedule(){
+          let ctt = $('#content').val();
+          $(target).parent().append('<span>' + ctt + '</span>');
+          $('#content').val('');
+          $('#date').val('');
+        }
+
+        
+        
+
+        
 
 
-        $('writeSchedule').on('click', function(){
-            console.log(content);
-        })
+
+
         
     </script>
   </body>
