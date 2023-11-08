@@ -6,6 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="log" class="login">login</button>
+    <button class="login" onclick="hrefLink()">login</button>
+
+    <script>
+        link = 'https://www.google.co.kr'; // 링크
+        // 상위폴더 / 하위폴더 / 같은폴더 내 이동 하는 문법이 모두 다름
+        // 1. 같은 디렉토리 내
+        // 파일 이름만 xxxx.html
+
+        // 2. 하위 디렉토리 내 
+        // './html/xxxx.html'
+
+        // 3. 상위 디렉토리 내
+        // '../ 현재 위치의 상위폴더 & ../../ 두단계 상위 폴더'
+
+        function hrefLink(){
+            location.href = link;
+        }
+    </script>
 </body>
 </html>
