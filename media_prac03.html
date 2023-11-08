@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/837ff3adc1.js" crossorigin="anonymous"
+    ></script>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            z-index: 100;
+        }
+        header .inner{
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        header .inner .logo{
+            position: relative;
+            right: 200px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        header .inner .menu{
+            display: flex;
+        }
+
+        header .inner .menu li{
+            margin: 0 10px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+        /* 내가 한거
+        @media screen and (max-width : 768px){
+            header{
+                height: fit-content;
+
+            }
+            header .inner .logo{
+                right: 0px;
+                height: 60px;
+                align-items: center;
+            }
+            header .inner{
+                flex-direction: column;
+            }
+            header .inner .menu{
+                width: 100vw;
+                background-color: aqua;
+                flex-direction: column;
+                align-items: center;
+            }
+            header .inner .menu li{
+                font-weight: 200;
+                margin: 20px;
+            }
+
+        } */
+
+        @media screen and (480px <= width <= 1024px){
+            header{
+                height: 60px;
+            }
+            header .inner{
+                display: block;
+            }
+            header .inner .logo{
+                /* i 태그 = text로 취급, 로고를 i 태그로 가져와서 text 조절로 사용 가능*/
+                position: static;
+                text-align: center;
+                line-height: 60px;
+            }
+            header .inner .menu{
+                background-color: aqua;
+                display: block;
+                text-align: center;
+            }
+            header .inner .menu li{
+                padding: 10px 0;
+                font-weight: 400;
+            }
+        }
+
+        @media screen and (max-width : 480px){
+            header{
+                height: 45px;
+            }
+            header .inner{
+                display: block;
+            }
+            header .inner .logo{
+                /* i 태그 = text로 취급, 로고를 i 태그로 가져와서 text 조절로 사용 가능*/
+                position: static;
+                text-align: center;
+                line-height: 45px;
+            }
+            header .inner .menu{
+                background-color: pink;
+                display: block;
+                text-align: center;
+            }
+            header .inner .menu li{
+                padding: 10px 0;
+                font-weight: 400;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <div class="logo">
+                <i class="fa-solid fa-igloo"></i>
+            </div>
+
+
+            <ul class="menu">
+                <li>메뉴1</li>
+                <li>메뉴2</li>
+                <li>메뉴3</li>
+                <li>메뉴4</li>
+            </ul>
+        </div>
+    </header>
+</body>
+
+</html>
