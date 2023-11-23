@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습</title>
+</head>
+
+<body>
+    <h1>콜백 지옥 예시</h1>
+
+    <script>
+        // setTimeout(function () {
+        //     document.body.style.backgroundColor = 'red';
+
+        //     setTimeout(function () {
+        //         document.body.style.backgroundColor = 'orange';
+
+        //         setTimeout(function () {
+        //             document.body.style.backgroundColor = 'yellow';
+
+        //             setTimeout(function () {
+        //                 document.body.style.backgroundColor = 'green';
+
+        //                 setTimeout(function () {
+        //                     document.body.style.backgroundColor = 'blue';
+        //                 }, 1000)
+        //             }, 1000)
+        //         }, 1000)
+        //     }, 1000)
+        // }, 1000)
+
+
+    function changeBackgroundColor(newColor){
+        return new Promise((resolve, reject)=>{
+            setTimeout(function(){
+                document.body.style.backgroundColor = newColor;
+                resolve();
+            }, 1000);
+        })
+    }
+
+    // 1. then() 이용
+    // changeBackgroundColor('red')
+    // .then(function(){
+    //     return changeBackgroundColor('orange');
+    // }).then(function(){
+    //     return changeBackgroundColor('yellow');
+    // }).then(function(){
+    //     return changeBackgroundColor('green');
+    // }).then(function(){
+    //     return changeBackgroundColor('blue');
+    // })
+
+    // 2. async-await 이용
+    async function exec(){
+        await changeBackgroundColor('red');
+        await changeBackgroundColor('orange');
+        await changeBackgroundColor('yellow');
+        await changeBackgroundColor('green');
+        await changeBackgroundColor('blue');
+    }
+    exec();
+    </script>
+</body>
+
+</html>
