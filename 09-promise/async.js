@@ -42,7 +42,7 @@ exec();
 async function exec1() {
     try {
         goMart();
-        await pickDrink();
+        await pickDrink(); 
         pay(product, price);
     } catch (error) {
         console.log(error);

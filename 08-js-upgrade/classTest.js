@@ -78,16 +78,3 @@ console.log(apt1);
 apt1.getFloor();
 apt1.getAge();
 
-class Rectangle{
-    constructor(x, y){
-        this.width = x;
-        this.height = y;
-    }
-
-    getArea1(){
-        return this.width*this.height
-    }
-}
-
-let rec2 = new Rectangle(5,7);
-console.log(rec2.getArea1());

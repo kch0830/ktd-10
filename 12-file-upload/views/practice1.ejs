@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice1</title>
+</head>
+<body>
+    <h1>파일 업로드</h1>
+
+    <form action="/upload" method="post" enctype="mulipart/form-data"></form>
+    <input type="text" name="id" id="id" placeholder="아이디"><br>
+    <input type="text" name="pw" id="pw" placeholder="비밀번호"><br>
+    <input type="text" name="name" id="name" placeholder="이름"><br>
+    <input type="text" name="year" id="year" placeholder="나이"><br>
+    <input type="file" name="dynamicFile" id="dynamicFile">
+    <button>업로드</button>
+
+
+    <script>
+        function fileUpload(){
+            //js만으로 폼 전송
+            //file을 같이 전송 -> FormData 객체를 활용하기!
+            //FormData란?
+            // form 태그의 데이터를 동적으로 제어할 수 있는 기능, 보통 axios, ajax 등등과 함께 사용
+
+            const formData = new FormData();
+            const file = document.querySelector('#dynamicFile');
+            const title = document.querySelector('#title');
+
+            console.log(file); // 선택한 파일 요소
+            console.log(file.files); // 업로드한 파일 객체
+            console.log(file.files[0]); // 업로드한 첫 파일
+
+            // append(key, value)
+            formData.append('dynamicFile', file.files[0]);
+            formData.append('title', title.value);
+
+            axios({
+                method: 'post',
+                url: '/dynamic',
+                data: formData,
+                headers:{
+                    'Content-Type': 'multipart/form-data'
+                    //enctype 지정과 동일
+                }
+            }).then((res)=>{
+                console.log(res.data);
+                const {
+                    file,
+                    title
+                } = res.data;
+
+                console.log('file > ', file);
+                // 이미지가 저장된 경로인 file.path 이용
+                const imgElem = document.querySelector('img');
+                imgElem.src = '/' + file.path;
+                imgElem.alt = title;
+                imgElem.classList.add('profile');
+            })
+        }
+    </script>
+</body>
+</html>

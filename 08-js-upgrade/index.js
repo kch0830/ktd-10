@@ -80,7 +80,7 @@ console.log(result2); // false
 const result3 = v1 < v2 && 'v2이 큼';
 console.log(result3); // v2이 큼
 
-// || (논리합)
+// || (논리합) = 앞에 값이 ture면 뒤에는 검사 X
 const result4 = v1 || 100;
 console.log(result4); // 5
 

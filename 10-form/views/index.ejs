@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- js form 유효성 검사-->
+    <form action="/js-form-check" method="post" name="valiForm" onsubmit="return checkForm(this)" target="_blank">
+        <input type="text" name="id" minlength="1" placeholder="ID" title="최소 1글자">
+        <span>우편물 수령장소</span>
+        <input type="checkbox" name="post" value="자택">자택
+        <input type="checkbox" name="post" value="회사">회사
+        <button>제출</button>
+    </form>
+    
+    <script>
+        function checkForm(form){
+            // 1) name으로 폼 선택
+            // const form = document.forms['valiForm'];
+            // 2) this로 보내서 매개변수로 받기
+            console.log(form);
+
+            if(form.id.value == ''){
+                form.id.focus();
+                alert('아이디 입력 필요');
+
+                return false; // submit 이벤트가 일어나지 않음
+            }
+            // 각각의 input 요소의 name 속성값으로 접근
+
+            // checkbox 가 둘다 체크가 안되었을 때
+            if((form.post[0].checked == false) && (form.post[1].checked == false)){
+                alert('우편물 수령 장소 선택 필요');
+
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
