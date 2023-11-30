@@ -6,6 +6,13 @@
     <title>File upload</title>
      <!-- axios cdn -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <style>
+    .profile{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+  </style>
 </head>
 <body>
     <h1>파일 업로드</h1>
@@ -82,6 +89,17 @@
                 }
             }).then((res)=>{
                 console.log(res.data);
+                const {
+                    file,
+                    title
+                } = res.data;
+
+                console.log('file > ', file);
+                // 이미지가 저장된 경로인 file.path 이용
+                const imgElem = document.querySelector('img');
+                imgElem.src = '/' + file.path;
+                imgElem.alt = title;
+                imgElem.classList.add('profile');
             })
         }
     </script>
