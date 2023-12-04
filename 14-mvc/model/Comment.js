@@ -1,31 +1,29 @@
-// [Before] Model 연결 전
-// (임시) DB로부터 받아온 데이터 댓글 목록
-exports.commnetInfos = () => {
+// (임시) DB로부터 받아온 데이터 댓글 목록 (가정)
+exports.commentInfos = () => {
     return [
         {
             id: 1,
-            userid: 'hellowwold',
+            userid: 'helloword',
             date: '2022-10-31',
-            comment: '안녕하세요',
+            comment: '안녕하세요~'
         },
         {
             id: 2,
-            userid: 'hell',
+            userid: 'hello',
             date: '2022-11-31',
-            comment: '안반가우',
+            comment: '반가워요'
         },
         {
             id: 3,
             userid: 'apple',
-            date: '2022-12-31',
-            comment: 'ㅎ윙',
+            date: '2023-3-31',
+            comment: '오 신기하다'
         },
         {
             id: 4,
-            userid: 'good',
-            date: '2022-09-31',
-            comment: 'good!',
-        }
-    
+            userid: 'best',
+            date: '2023-4-31',
+            comment: '댓글 적기~'
+        },
     ]
 }

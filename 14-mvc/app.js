@@ -24,6 +24,11 @@ app.use('/', indexRouter); // localhost:PORT 경로를 기본으로 ./routes/ind
 const userRouter = require('./routes/user');
 app.use('/user', userRouter);
 
+// ----------- 실습 --------------
+const practiceRouter = require('./routes/practice');
+app.use('/practice', practiceRouter);
+
+
 
 // [404 error]
 // 맨 마지막에 라우트로 선언 : 위에다 하게 되면 나머지 코드 무시되기 때문
