@@ -62,3 +62,15 @@ exports.edit_profile = (data, cb) => {
         cb(rows);
     })
 }
+
+// 회원탈퇴 요청
+exports.delete_profile = (id, cb) => {
+    const sql = 'DELETE FROM user WHERE id = ?';
+    conn.query(sql, [id], (err, rows)=> {
+        if(err) throw err;
+
+        console.log('User.js delete_profile > ', rows);
+
+        cb(rows);
+    })
+}
