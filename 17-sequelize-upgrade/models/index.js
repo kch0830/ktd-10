@@ -10,7 +10,7 @@ const sequelize = new Sequelize(
 )
 
 // TODO : 모델 모듈 불러오기
-const Player = require('./Player')(sequelize, Sequelize);
+const Player = require('./player')(sequelize, Sequelize); //처음 player.js 로 만들어서 그런가??
 const Profile = require('./Profile')(sequelize, Sequelize);
 const Team = require('./Team')(sequelize, Sequelize);
 
