@@ -9,6 +9,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // TODO: cookie parser 미들웨어 등록
+app.use(cookieParser());
+
+const cookieConfig = {
+  maxAge: 24* 60* 60 * 1000,
+}
 
 app.get('/', (req, res) => {
   // *다음과 같이 기능 구현하였는데, 굳이 이렇게 하지 않아도 됩니다.
@@ -17,7 +22,7 @@ app.get('/', (req, res) => {
   // console.log('req.cookies.popup >> ', req.cookies.popup);
 
   // TODO: index.ejs render할 때 두 번째 인자로 popup key 로 요청의 쿠키값 보내기
-  res.render('index', {});
+  res.render('index', {popup: req.cookies.popup});
 });
 
 app.post('/setcookie', (req, res) => {

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>socket.io</title>
+    <!-- cdn -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <style>
+        /* [실습2] 채팅창 UI*/
+        .chat-list {
+            background-color: skyblue;
+            width: 50%;
+            height: 500px;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        .chat-list div {
+            margin-top: 3px;
+        }
+
+        .chat-list div div {
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .my-chat {
+            text-align: right;
+        }
+
+        .my-chat div {
+            background-color: yellow;
+        }
+
+        .other-chat div {
+            background-color: blue;
+        }
+
+        .notice {
+            text-align: center;
+            color: #005397;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>my chat</h1>
+
+    <!-- [실습1] 각 버튼 누를 때 마다 서버로 메세지 보내기 -->
+    <button onclick="sayHello()">hello</button>
+    <button onclick="sayStudy()">study</button>
+    <button onclick="sayBye()">bye</button>
+    <p id="server-result"></p>
+
+    <main class="chat-box">
+        <div class="chat-list"> <!-- 임시 대화 데이터-->
+            <div class="my-chat">
+                <div>user1: msg1</div>
+            </div>
+            <div class="other-chat">
+                <div>user2: msg2</div>
+            </div>
+        </div>
+        
+        <input type="text" id="message">
+        <button type="button" onclick="send()">전송</button>
+    </main>
+
+    <script>
+        // [실습1]
+        // 소켓 사용을 위한 객체 생성
+        const socket = io.connect();
+
+        socket.on('connect', () => {
+            console.log('클라이언트 연결 완료');
+        })
+
+        // hello emit
+        function sayHello() {
+            socket.emit('hello', {
+                who: 'client',
+                msg: 'hello'
+            });
+        }
+
+        function sayStudy() {
+            socket.emit('study', {
+                who: 'client',
+                msg: 'study'
+            });
+        }
+
+        function sayBye() {
+            socket.emit('bye', {
+                who: 'client',
+                msg: 'bye'
+            });
+        }
+
+        // helloKR on
+        socket.on('helloKR', (data) => {
+            console.log(data);
+            document.getElementById('server-result').textContent = `${data.who} : ${data.msg}`
+        })
+
+        socket.on('studyKR', (data) => {
+            console.log(data);
+            document.getElementById('server-result').textContent = `${data.who} : ${data.msg}`
+        })
+
+        socket.on('byeKR', (data) => {
+            console.log(data);
+            document.getElementById('server-result').textContent = `${data.who} : ${data.msg}`
+        })
+
+        // [실습2]
+
+        // [실습3]
+        socket.on('notice', (msg) => {
+            document.querySelector('.chat-list').insertAdjacentHTML('beforeend', `<div class='notice'>${msg}</div>`);
+        })
+    </script>
+</body>
+</html>
