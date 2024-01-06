@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Introduction</title>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #004198;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    #logo {
+      max-width: 150px;
+    }
+    nav {
+      background-color: #3c3c3c;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    #book-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+    .book {
+      width: 200px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="로고" id="logo">
+    <button onclick="logInSignUp">Login/signup</button>
+  </header>
+
+  <nav>
+    <a href="#">신간 추천</a>
+    <a href="#">베스트셀러</a>
+    <a href="#">리뷰가 가장 많이 달린 책</a>
+    <a href="#">좋아요 가장 많은 순위</a>
+  </nav>
+
+  <div id="book-container">
+    <!-- 예시 책 데이터 -->
+    <div class="book">
+      <img src="book1.jpg" alt="Book 1">
+      <h3>책 제목 1</h3>
+      <p>저자: 작가 1</p>
+      <p>가격: 20,000원</p>
+    </div>
+
+    <div class="book">
+      <img src="book2.jpg" alt="Book 2">
+      <h3>책 제목 2</h3>
+      <p>저자: 작가 2</p>
+      <p>가격: 25,000원</p>
+    </div>
+
+    <div class="book">
+      <img src="book3.jpg" alt="Book 3">
+      <h3>책 제목 3</h3>
+      <p>저자: 작가 3</p>
+      <p>가격: 18,000원</p>
+    </div>
+
+    <div class="book">
+      <img src="book4.jpg" alt="Book 4">
+      <h3>책 제목 4</h3>
+      <p>저자: 작가 4</p>
+      <p>가격: 22,000원</p>
+    </div>
+  </div>
+</body>
+</html>

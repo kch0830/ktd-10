@@ -24,7 +24,7 @@ app.use(session({
 
 // TODO: routes/user 요청 경로 분리
 const userRouter = require('./routes/user');
-app.use('/', indexRouter);
+app.use('/', userRouter);
 
 // TODO: 404 처리
 app.get('*', (req, res)=> {

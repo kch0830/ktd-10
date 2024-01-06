@@ -42,6 +42,20 @@
         socket.addEventListener('error', (event) => {
             console.log('[에러 발생] :', event.console.error);
         })
+
+        // message 이벤트
+        socket.addEventListener('message', (event) => {
+            console.log('event > ', event);
+            const data = JSON.parse(event.data);
+            const {
+                msg,
+                name
+            } = data;
+            
+            const li = document.createElement('li');
+            li.textContent = `${name}님 - ${msg}`;
+            ul.appendChild(li);
+        })
         
         // 폼 submit 이벤트
         chatForm.addEventListener('submit', (event) => {
@@ -66,6 +80,8 @@
             // input 초기화
             chatForm.reset();
         })
+
+
     </script>
 </body>
 </html>
